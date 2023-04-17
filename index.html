@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Slash</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="back" class="back">
+        <span class="back__icon"></span>
+        <span class="back__label">back</span>
+      </button>
+      <img class="logo" src="img/Logo.svg" alt="slash logo" />
+      <button class="skip" id="skip">Skip</button>
+    </header>
+    <div class="step">
+      <input checked="checked" id="step-1" type="radio" name="step" />
+      <input id="step-2" type="radio" name="step" />
+      <input id="step-3" type="radio" name="step" />
+      <nav>
+        <ul>
+          <li class="step-1">
+            <label for="step-1"></label>
+          </li>
+          <li class="step-2">
+            <label for="step-2"></label>
+          </li>
+          <li class="step-3">
+            <label for="step-3"></label>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <div class="step-1">
+          <h3>Листайте далее</h3>
+          <p>
+            По макету на третьем шаге банковская карта. Тут исходники: А тут мои
+            комментарии:
+          </p>
+        </div>
+        <div class="step-2">
+          <h3>От всей души</h3>
+          <p>
+            Все переключатели работают. Выполнено без каких-либо готовых
+            билиотек. Только свой css и js. Все компактно и адаптивно. Все по
+            макету. Пожалуйста, если увидете ошибку сделайте личное замечание.
+            Для меня это важно.
+          </p>
+        </div>
+        <div class="step-3">
+          <h3>Connect your bank card</h3>
+          <p>
+            You'll get discounted prices when shopping with Slash using this
+            card. Your data will be stored on secure servers using industry
+            standard encryption and will not be shared with any third party.
+          </p>
+          <div class="card">
+            <div class="card__front">
+              <img src="img/chip.svg" alt="chip" class="card__chip" />
+              <div class="card__input">
+                <label for="cardNumber">Card number</label>
+                <input
+                  type="text"
+                  name="cardNumber"
+                  id="cardNumber"
+                  inputmode="numeric"
+                  placeholder="0000  0000  0000  0000"
+                  oninput="formatCardNumber(this)"
+                  maxlength="19"
+                />
+              </div>
+              <div class="card__inputs">
+                <div class="card__input">
+                  <label for="card__name">Card name</label>
+                  <input
+                    placeholder="Name Surname"
+                    type="text"
+                    class="card__name"
+                    name="card__name"
+                    id="card__name"
+                    oninput="formatName(this)"
+                  />
+                </div>
+                <div class="card__input">
+                  <label for="card__expiry">Expiry date</label>
+                  <div class="card__expiry">
+                    <input
+                      oninput="formatMonth(this)"
+                      id="card__expiry-mm"
+                      type="text"
+                      pattern="[0-9]*"
+                      inputmode="numeric"
+                      placeholder="MM"
+                    />
+                    /
+                    <input
+                      oninput="formatYear(this)"
+                      id="card__expiry-yy"
+                      type="text"
+                      pattern="[0-9]*"
+                      inputmode="numeric"
+                      placeholder="YY"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="tooltip">
+                <img src="img/close.svg" alt="close" class="tooltip__off" />
+                <span>3 digits on the back of your card.</span>
+              </div>
+            </div>
+            <div class="card__back">
+              <div class="card__input card__cvc">
+                <label for="card__cvc">
+                  CVV/CVC
+                  <img class="tooltip__on" src="img/info.svg" alt="info icon" />
+                </label>
+                <input
+                  oninput="formatCvc(this)"
+                  maxlength="4"
+                  name="card__cvc"
+                  pattern="\d*"
+                  placeholder="CVC"
+                  type="tel"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="connect">
+            <button class="next">
+              <span>connect</span>
+              <img src="img/security.svg" alt="security icon" />
+            </button>
+            <p>We'll charge and refund €1 to check if the card is valid.</p>
+            <div class="connect__photos">
+              <img src="img/bank card visa.svg" alt="visa" />
+              <img src="img/bank card master.svg" alt="master" />
+              <img src="img/bank card pci.svg" alt="pci" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="center-mt2">
+        <button id="next" class="next">Next</button>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
