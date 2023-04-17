@@ -1,51 +1,3 @@
-:root {
-  --color-blue-default: #0432D3;
-  --color-blue-hover: #1B4DFF;
-  --color-blue-pressed: #0024A4;
-  --color-black1: #000000;
-  --color-black2: #050A1B;
-  --color-grey1: #F2F5FC;
-  --color-grey2: #D0D9EF;
-  --color-grey3: #595C67;
-  --color-grey4: #A6ACBB;
-  --color-grey5: #98ABD9;
-  --color-pink: #FFEEF1;
-  --color-white: #FFFFFF;
-}
-
-@font-face {
-  font-family: 'EuclidCircularA';
-  src: url('../fonts/EuclidCircularA/Regular.eot');
-  src: url('../fonts/EuclidCircularA/Regular.eot?#iefix') format('embedded-opentype'), 
-          url('../fonts/EuclidCircularA/Regular.woff2') format('woff2'), 
-          url('../fonts/EuclidCircularA/Regular.woff') format('woff'),
-          url('../fonts/EuclidCircularA/Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'EuclidCircularA';
-  src: url('../fonts/EuclidCircularA/Medium.eot');
-  src: url('../fonts/EuclidCircularA/Medium.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/EuclidCircularA/Medium.woff2') format('woff2'), 
-          url('../fonts/EuclidCircularA/Medium.woff') format('woff'),
-          url('../fonts/EuclidCircularA/Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'EuclidCircularA';
-  src: url('../fonts/EuclidCircularA/SemiBold.eot');
-  src: url('../fonts/EuclidCircularA/SemiBold.eot?#iefix') format('embedded-opentype'), 
-          url('../fonts/EuclidCircularA/SemiBold.woff2') format('woff2'), 
-          url('../fonts/EuclidCircularA/SemiBold.woff') format('woff'),
-          url('../fonts/EuclidCircularA/SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
 h3 {
   font-family: 'EuclidCircularA', sans-serif;
   font-size: 28px;
@@ -62,6 +14,22 @@ p {
   font-weight: normal;
   text-align: center;
   margin: 0 20px;
+}
+
+a {
+  color: var(--color-blue-default);
+  transition: .2s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-blue-hover);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:active {
+  color: var(--color-blue-pressed);
 }
 
 *, *:after, *:before {
@@ -92,6 +60,7 @@ header {
   align-items: center;  
   cursor: pointer;
 }
+
 .back__icon {
   display: inline-block;
   width: 32px;
@@ -100,9 +69,11 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .back.disable .back__icon{
   background-image: url('../img/arrow_s-d.svg');
 }
+
 .back__label {
   display: none;
   color: var(--color-black2);
@@ -111,33 +82,9 @@ header {
   line-height: 1.4;
   text-transform: capitalize;
 }
+
 .back.disable .back__label{
   color: var(--color-grey5);
-}
-
-@media (min-width: 376px) {
-  .back__icon {
-    width: 48px;
-    height: 48px;
-    background-image: url('../img/arrow_m.svg');
-  }
-  .back.disable .back__icon{
-    background-image: url('../img/arrow_m-d.svg');
-  }
-}
-
-@media (min-width: 769px) {
-  .back__icon {
-    background-image: url('../img/arrow_l.svg');
-    width: 20px;
-    height: 20px;
-  }
-  .back.disable .back__icon{
-    background-image: url('../img/arrow_l-d.svg');
-  }
-  .back__label {
-    display: inline-block;
-  }
 }
 
 .logo {
@@ -215,9 +162,9 @@ header {
 .card {
   position: relative;
   height: 432px;
-  margin: 64px 0 32px;
+  margin: 50px 0 32px;
 }
-.card>div {
+.card>div:not(.tooltip) {
   border: 2px solid var(--color-grey2);
   height: 292px;
   width: calc(100% - 20px);  
@@ -290,7 +237,7 @@ header {
 }
 
 .card__input .card__name {
-  width: calc(100% - 16px);
+  width: calc(100% - 14px);
 }
 
 .card__inputs {
@@ -350,7 +297,7 @@ header {
   right: 8px;
   top: 201px;
   position: absolute;  
-  z-index: 1;
+  z-index: 5;
 }
 
 .tooltip__off {
@@ -396,7 +343,8 @@ header {
 .connect p {
   margin: 8px 0;
   font-size: 13px;
-  line-height: 140%;
+  line-height: 1.4;
+  text-align: left;
 }
 .connect__photos {
   margin-top: 40px;
@@ -406,4 +354,70 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+
+@media (min-width: 376px) {
+  .back__icon {
+    width: 48px;
+    height: 48px;
+    background-image: url('../img/arrow_m.svg');
+  }
+  .back.disable .back__icon{
+    background-image: url('../img/arrow_m-d.svg');
+  }
+}
+
+@media screen and (min-width: 435px) {  
+  .card__input .card__name {
+    width: 100%;
+  }
+  .card__front .card__inputs>div:first-child {
+    width: calc(100% - 120px);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .card>div:not(.tooltip) {
+    width: 460px;  
+    border: 2px solid var(--color-grey2);
+    border-radius: 20px;
+  }
+  .card__back {
+    border-left: 2px solid var(--color-grey2)!important;
+  }
+  .card__front {
+    border-right: 2px solid var(--color-grey2)!important;
+  }
+}
+
+@media screen and (min-width: 645px) {
+  .card__back {
+    top: 40px;
+  }
+}
+
+@media screen and (min-width: 662px) {
+  .card {
+    width: 634px;
+    margin: 33px auto;
+    height: 333px;
+  }
+  section {
+    width: 634px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .back__icon {
+    background-image: url('../img/arrow_l.svg');
+    width: 20px;
+    height: 20px;
+  }
+  .back.disable .back__icon{
+    background-image: url('../img/arrow_l-d.svg');
+  }
+  .back__label {
+    display: inline-block;
+  }
 }
