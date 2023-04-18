@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For Slash</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
     <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <style>
@@ -23,6 +24,15 @@
         color: var(--color-white);
         padding: 8px 18px;
         font-weight: 500;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+      a:hover {
+        background: var(--color-blue-hover);
+        cursor: pointer;
+      }
+      a:active {
+        background: var(--color-blue-pressed);
       }
       .pictureTag {
         width: clamp(300px, 100%, 650px);
