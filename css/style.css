@@ -454,6 +454,9 @@ header {
   .card__back {
     top: 40px;
   }
+  .tooltip {
+    top: 105px;
+  }
 }
 
 @media screen and (min-width: 662px) {
