@@ -11,12 +11,18 @@
   </head>
   <body>
     <header>
-      <button id="back" class="back">
+      <button id="back" class="back" title="Нажмите, чтобы вернуться назад">
         <span class="back__icon"></span>
         <span class="back__label">back</span>
       </button>
       <img class="logo" src="img/Logo.svg" alt="slash logo" />
-      <button class="skip" id="skip">Skip</button>
+      <button
+        class="skip"
+        id="skip"
+        title="Нажмите, чтобы сразу перейти к покупке"
+      >
+        Skip
+      </button>
     </header>
     <div class="step">
       <input checked="checked" id="step-1" type="radio" name="step" />
@@ -137,7 +143,7 @@
             </div>
           </div>
           <div class="connect">
-            <button class="next">
+            <button class="next" title="click for buy">
               <span>connect</span>
               <img src="img/security.svg" alt="security icon" />
             </button>
@@ -151,7 +157,9 @@
         </div>
       </section>
       <div class="center-mt2">
-        <button id="next" class="next">Next</button>
+        <button id="next" class="next" title="Нажмите, чтобы продолжить">
+          Next
+        </button>
       </div>
     </div>
     <script src="js/app.js"></script>
