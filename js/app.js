@@ -76,6 +76,7 @@ prevButton.addEventListener("click", function () {
   currentStep = (currentStep - 1 + radios.length) % radios.length;
   radios[currentStep].checked = true;
   backBtn(currentStep);
+  nextButton.style.display = "block";
 });
 nextButton.addEventListener("click", function () {
   currentStep = (currentStep + 1) % radios.length;
