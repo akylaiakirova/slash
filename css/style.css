@@ -18,6 +18,8 @@ p {
 
 a {
   color: var(--color-blue-default);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
   text-decoration: none;
 }
@@ -34,7 +36,6 @@ a:active {
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -47,17 +48,27 @@ body {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 8px 8px 0;
 }
 
 .back {
   background: none;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;  
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;  
   cursor: pointer;
 }
 
@@ -100,6 +111,8 @@ header {
   color: var(--color-blue-default);
   height: 40px;
   width: 69px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -127,9 +140,15 @@ header {
   list-style: none;
   margin: 24px 0 16px;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .step ul li label {
@@ -179,10 +198,19 @@ header {
   z-index: 1;
   border-radius: 0 0 20px 0;
   border-left: none!important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding: 28px 25px;
 }
 
@@ -201,8 +229,13 @@ header {
 }
 
 .card__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 18px;
 }
 
@@ -220,6 +253,8 @@ header {
   padding: 18px 20px;
   font-size: 16px;
   color: var(--color-black2);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -241,13 +276,21 @@ header {
 }
 
 .card__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card__expiry {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: var(--color-grey1);
 }
 
@@ -275,8 +318,12 @@ header {
 }
 
 .card__input.card__cvc label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card__input.card__cvc label img {
@@ -290,7 +337,8 @@ header {
   width: 174px;
   height: 114px;
   padding: 28px 23px 0 26px;
-  box-sizing: border-box;  
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;  
   background: url(../img/tooltip.svg) no-repeat;
   color: var(--color-white);  
   display: none;
@@ -315,10 +363,18 @@ header {
   font-size: 16px;
   line-height: 1.4;
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: capitalize;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
   border: none;
 }
@@ -351,8 +407,12 @@ header {
 }
 
 .center-mt2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
 
